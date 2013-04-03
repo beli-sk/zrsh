@@ -17,7 +17,7 @@ function rcmd {
   else
     precmd=""
   fi
-  /opt/zabbix/bin/zabbix_get -s "$IP" -k "system.run[${precmd}$1]"
+  zabbix_get -s "$IP" -k "system.run[${precmd}$1]"
   return $?
 }
 
